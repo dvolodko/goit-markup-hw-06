@@ -21,6 +21,7 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   letter-spacing: 0.02em;
+  line-height: 1.5;
   color: var(--slate);
   background-color: var(--white);
 }
@@ -34,9 +35,22 @@ ol {
   list-style: none;
 }
 
-/* хедер */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--navy-blue);
+}
 
-.header-nav-logo {
+.section-title {
+  font-size: 36px;
+  line-height: 1.1111;
+  text-align: center;
+}
+
+.logo {
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 18px;
@@ -46,20 +60,22 @@ ol {
   color: var(--iris);
 }
 
+/* хедер */
+
 .header-nav-logo-dark {
   color: var(--navy-blue);
 }
 
 .header-nav-link {
   font-weight: 500;
-  line-height: 1.5;
   color: var(--navy-blue);
 }
 
 .header-address-link {
-  line-height: 1.5;
   color: currentColor;
 }
+
+/* Хіро */
 
 .hero {
   background-color: var(--navy-blue);
@@ -79,4 +95,59 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white);
+}
+
+/* Переваги */
+
+.feauters-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Наша команда */
+
+.our-team-section {
+  background-color: var(--cloud);
+}
+
+.our-team-item {
+  background-color: var(--white);
+}
+
+.our-team-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.our-team-item-text {
+  text-align: center;
+}
+
+/* Портфоліо */
+
+.portfolio-item {
+  background-color: var(--white);
+}
+
+.portfolio-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Футер */
+
+.footer {
+  background-color: var(--navy-blue);
+}
+
+.footer-logo-light {
+  color: var(--cloud);
+}
+
+.footer-text {
+  color: var(--cloud);
 }

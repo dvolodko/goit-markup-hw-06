@@ -69,10 +69,19 @@ h6 {
 .header-nav-link {
   font-weight: 500;
   color: var(--navy-blue);
+  &:hover,
+  &:focus {
+    color: var(--ocean);
+  }
 }
 
 .header-address-link {
+  font-style: normal;
   color: currentColor;
+  &:hover,
+  &:focus {
+    color: var(--ocean);
+  }
 }
 
 /* Хіро */
@@ -95,6 +104,11 @@ h6 {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: var(--ocean);
+  }
 }
 
 /* Переваги */

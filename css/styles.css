@@ -162,6 +162,8 @@ img {
 }
 
 .header-address {
+  display: flex;
+  align-items: center;
   font-style: normal;
 }
 

@@ -513,17 +513,41 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-social-text">Subscribe</p>
+          <form class="footer-subscribe-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              class="footer-subscribe-email-input" />
+            <button type="submit" class="footer-subscribe-button">
+              Subscribe
+              <svg class="footer-subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-paper-airplane"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
+      <div class="footer-subscribe"></div>
     </footer>
     <!-- modal window -->
-    <div class="overlay">
+    <div class="overlay is-open">
       <div class="overlay-modal">
-        <h3>Leave your contacts and we will call you back</h3>
-        <form>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <textarea name="" id="" rows="10"></textarea>
+        <h3 class="order-form-header">
+          Leave your contacts and we will call you back
+        </h3>
+        <form class="order-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" />
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment" rows="10"></textarea>
           <input type="checkbox" name="" id="" />
           <button type="submit">Send</button>
         </form>

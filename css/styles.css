@@ -641,6 +641,13 @@ img {
   width: 100%;
 }
 
+.order-form-input-text::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-modal);
+}
+
 .order-form-input-icon {
   position: absolute;
   top: 50%;
@@ -652,6 +659,27 @@ img {
 .textarea {
   resize: none;
   padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.checkbox-agreement-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 24px;
+}
+
+.checkbox-agreement-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+
+.checkbox-agreement-label-link {
+  text-decoration: underline;
+  color: var(--iris);
+  line-height: 1.33;
 }
 
 .no-scroll {

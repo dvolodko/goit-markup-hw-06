@@ -110,6 +110,28 @@ img {
   overflow: hidden;
 }
 
+.button-main {
+  display: block;
+  background-color: var(--iris);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  min-width: 169px;
+  transition: background-color 250ms var(--transition-function-main);
+}
+
+.button-main:hover,
+.button-main:focus {
+  background-color: var(--ocean);
+}
+
 /* Контейнер */
 
 .container {
@@ -262,28 +284,6 @@ img {
   color: var(--white);
   margin: 0 auto 48px;
   max-width: 496px;
-}
-
-.button-main {
-  display: block;
-  background-color: var(--iris);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--white);
-  cursor: pointer;
-  padding: 16px 32px;
-  margin: 0 auto;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  min-width: 169px;
-  transition: background-color 250ms var(--transition-function-main);
-}
-
-.button-main:hover,
-.button-main:focus {
-  background-color: var(--ocean);
 }
 
 /* Переваги */
@@ -475,7 +475,7 @@ img {
   margin-right: 80px;
 }
 
-.footer-social-text {
+.footer-text {
   font-weight: 500;
   color: var(--white);
   margin-bottom: 16px;
@@ -521,42 +521,37 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 24px;
+}
+
+.footer-subscribe-email-label {
+  flex-grow: 1;
 }
 
 .footer-subscribe-email-input {
-  flex-grow: 1;
-  padding: 8px 16px;
-  margin-right: 24px;
+  padding-left: 16px;
+  width: 264px;
   height: 40px;
   background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-.footer-subscribe-email-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: var(--white);
 }
 
-.footer-subscribe-email-input:focus {
-  outline: none;
+.footer-subscribe-email-input::placeholder {
+  color: inherit;
 }
 
 .footer-subscribe-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  min-width: 165px;
   padding: 8px 24px;
-  border-radius: 4px;
-  border: none;
-  background-color: var(--iris);
-  color: var(--white);
-  cursor: pointer;
-  transition: background-color 250ms var(--transition-function-main);
 }
 
 .footer-subscribe-button:hover,
@@ -566,6 +561,7 @@ img {
 
 .footer-subscribe-icon {
   fill: var(--white);
+  margin-left: 16px;
 }
 
 /* modal window */
@@ -578,30 +574,34 @@ img {
   height: 100%;
   z-index: 10;
   background-color: var(--navy-blue-modal);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms var(--transition-function-main);
+  transition: opacity 250ms var(--transition-function-main),
+    visibility 250ms var(--transition-function-main);
 }
 
 .overlay.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
 .overlay-modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--dairy);
   padding: 72px 24px 24px;
   width: 408px;
-  max-height: 80%;
+  min-height: 584px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+  transition: transform 250ms var(--transition-function-main);
 }
 
 .order-form-header {
@@ -619,23 +619,30 @@ img {
   align-items: stretch;
 }
 
+.order-form-input-label-wrapper {
+  margin-bottom: 8px;
+}
+
 .order-form-label {
+  display: block;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate);
-  margin-bottom: 4px;
 }
 
 .order-form-input-wrapper {
   position: relative;
-  margin-bottom: 8px;
 }
 
 .order-form-input-text {
-  padding: 8px 16px 8px 38px;
+  height: 40px;
+  padding-left: 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
   width: 100%;
   transition: border-color 250ms var(--transition-function-main);
 }
@@ -648,14 +655,13 @@ img {
 }
 
 .order-form-input-text:focus {
-  outline: none;
   border-color: var(--iris);
 }
 
 .order-form-input-icon {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 16px;
   transform: translateY(-50%);
   fill: var(--navy-blue);
   transition: fill 250ms var(--transition-function-main);
@@ -665,10 +671,14 @@ img {
   fill: var(--iris);
 }
 
+.order-form-textarea-label-wrapper {
+  margin-bottom: 16px;
+}
+
 .textarea {
   resize: none;
-  padding-left: 16px;
-  margin-bottom: 16px;
+  padding: 8px 16px;
+  height: 120px;
 }
 
 .checkbox-agreement-wrapper {
@@ -679,28 +689,23 @@ img {
 }
 
 .order-form-swapped-checkbox-wrapper {
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: background-color 250ms var(--transition-function-main),
-    border-color 250ms var(--transition-function-main);
-}
-
-.order-form-swapped-checkbox {
   fill: transparent;
-  transition: fill 250ms var(--transition-function-main);
+  transition: background-color 250ms var(--transition-function-main),
+    border 250ms var(--transition-function-main),
+    fill 250ms var(--transition-function-main);
 }
 
 .order-form-input-checkbox:checked + label span {
   background-color: var(--ocean);
-  border-color: var(--ocean);
-}
-
-.order-form-input-checkbox:checked + label svg {
+  border: none;
   fill: var(--cloud);
 }
 
@@ -718,12 +723,17 @@ img {
   line-height: 1.33;
 }
 
+.order-submit-button {
+  height: 56px;
+}
+
 .order-form-close-button {
   position: absolute;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--cornflower);
@@ -732,7 +742,7 @@ img {
   align-items: center;
   cursor: pointer;
   transition: background-color 250ms var(--transition-function-main),
-    border-color 250ms var(--transition-function-main);
+    border 250ms var(--transition-function-main);
 }
 
 .order-form-close-icon {
@@ -743,7 +753,7 @@ img {
 .order-form-close-button:hover,
 .order-form-close-button:focus {
   background-color: var(--ocean);
-  border-color: var(--ocean);
+  border: none;
 }
 
 .order-form-close-button:hover svg,

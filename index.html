@@ -21,12 +21,23 @@
         <a href="./index.html" class="logo mobile-header-logo"
           >Web<span class="header-nav-logo-dark">Studio</span></a
         >
-        <button type="button" class="mobile-header-hamburger-button">
+        <button
+          type="button"
+          class="mobile-header-hamburger-button"
+          data-modal="mobile-open">
           <svg class="mobile-header-hamburger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-hamburger"></use>
           </svg>
         </button>
-        <div class="mobile-header-menu is-open">
+        <div class="mobile-header-menu">
+          <button
+            type="button"
+            class="close-button mobile-menu-close-button"
+            data-modal="mobile-close">
+            <svg class="close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
           <nav class="mobile-header-nav">
             <ul class="mobile-header-nav-list">
               <li class="mobile-header-nav-item">
@@ -62,44 +73,44 @@
               </li>
             </ul>
           </address>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
+          <ul class="social-list mobile-menu-social-list">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link"
                 href="https://x.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin-logo"></use></svg
               ></a>
             </li>
@@ -564,44 +575,44 @@
         </div>
         <div class="footer-social">
           <p class="footer-text">Social media</p>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
+          <ul class="social-list footer-social-list">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link footer-social-link"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link footer-social-link"
                 href="https://x.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link footer-social-link"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook-logo"></use></svg
               ></a>
             </li>
-            <li class="footer-social-item">
+            <li class="social-item">
               <a
-                class="footer-social-link"
+                class="social-link footer-social-link"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer nofollow">
-                <svg class="footer-social-icon" width="24" height="24">
+                <svg class="social-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin-logo"></use></svg
               ></a>
             </li>
@@ -632,11 +643,8 @@
     <!-- modal window -->
     <div class="overlay" data-modal="overlay">
       <div class="overlay-modal">
-        <button
-          type="button"
-          class="order-form-close-button"
-          data-modal="close">
-          <svg class="order-form-close-icon" width="8" height="8">
+        <button type="button" class="close-button" data-modal="close">
+          <svg class="close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>

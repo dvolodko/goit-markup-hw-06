@@ -616,6 +616,9 @@ img {
   }
 
   .feauters-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: calc((100% - 1 * 24px) / 2);
   }
 }
@@ -623,6 +626,7 @@ img {
 @media (min-width: 1158px) {
   .feauters-item {
     width: calc((100% - 3 * 24px) / 4);
+    align-items: stretch;
   }
 
   .feauters-item-icon-wrapper {
@@ -912,8 +916,7 @@ img {
     gap: 72px 24px;
     align-items: baseline;
     justify-content: flex-start;
-    padding-left: 108px;
-    padding-right: 108px;
+    max-width: 584px;
   }
 
   .footer-copyright {
@@ -945,6 +948,7 @@ img {
     padding-left: 15px;
     padding-right: 15px;
     gap: 0;
+    max-width: 1158px;
   }
 
   .footer-copyright {
